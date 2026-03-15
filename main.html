@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宠物健康监测</title>
+    <style>
+    body{
+        margin: 0px;
+        height: 100vh;
+        background-color: #eee;
+    }
+    /*{
+      border: 1px solid black;
+    }*/
+    .flex{
+        display: flex;
+    }
+    .white{
+        background-color: white;
+    }
+    .flex1{
+        flex: 1;
+    }
+    .column{
+        flex-direction: column;
+    }
+    .center{
+        justify-content: center;
+        align-items: center;
+    }
+    .evenly{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .between{
+        justify-content: space-between;
+    }
+    .directorsize{
+        font-size: 20px;
+    }
+    .mg{
+        margin: 8px;
+    }
+    .mgr{
+        margin-right: 8px;
+    }
+    .mgt{
+        margin-top: 8px;
+    }
+    .tbroder{
+        border-right: 1px solid;
+    }
+    .page{
+        display: none;
+    }
+    .pageactive{
+        display: block;
+    }
+</style>
+</head>
+<body class="flex">
+    <!-- 侧栏 -->
+     <div style="width: 100px;z-index: 2; display: none;" class="flex column mg">
+        <div class="flex flex1 center directorsize white">日常状态</div>
+        <div class="flex flex1 center directorsize white mgt">报警中心</div>
+        <div class="flex flex1 center directorsize white mgt">我的设备</div>
+     </div>
+    <!-- 主栏 -->
+     <div class="flex flex1 column">
+        <!-- 顶部状态栏 -->
+         <div class="flex mg" style="height: 60px;z-index: 1;">
+            <!-- 头像 -->
+             <div style="justify-content: center;" class="flex column center white">
+                <img src="https://s41.ax1x.com/2026/03/15/peEzMSH.png" style="height: 60px;width: 60px;">
+             </div>
+            <!-- 健康指数 -->
+            <div style="flex: auto;" class="flex center white tbroder">
+                 <p class="flex center">🟢 健康指数: 98</p>
+            </div>
+            <!-- 个性 -->
+             <div style="flex: auto;" class="flex center white tbroder">
+                <div>今天也是元气满满的一天</div>
+             </div>
+            <!-- 电量-->
+             <div style="flex: auto;" class="flex center white">
+                <div>项圈已连接</div>
+                <div>[⚡85%] </div>
+             </div>
+         </div>
+        <!-- 数据和报告 -->
+         <div class="flex flex1 column">
+            <!-- 今日活动 -->
+             <div class="flex column evenly white mgr" style="height: 150px;">
+                <!-- 今日步数&目标 -->
+                 <div>今日步数:  ====== 3294步 ======]</div>
+                 <div>目标:  [====== 6000步 ======]</div>
+                 
+                 <!-- 评语 -->
+                 <div class="flex center">[还要更勤快些哦]</div>
+             </div>
+             <!-- 今日睡眠 -->
+             <div class="flex column evenly white mgt mgr" style="height: 200px;">
+                    <!-- 总时长 -->
+                    <div>总时长 5h 32m</div>
+                     <!-- 深睡 -->
+                    <div>深睡 2h 10m</div>
+                <!-- 可视化睡眠周期 -->
+                 <div>
+                    [ZZZ___ZZZZZZ____ZZ_]
+                 </div>
+                <!-- 最近一次小睡 -->
+                 <div class="flex center">
+                    最近一次小睡: 下午 3:30 - 4:15
+                </div>
+             </div>
+             <!-- 近七天活动趋势 -->
+             <div class="flex column mgt mgr" style="height: 500px;">
+                <!-- 切换栏 -->
+                <div class="flex evenly white">
+                    <!-- 标题 -->
+                    <div>
+                        最近7天活动趋势
+                    </div>
+                    <!-- 周/月/年 -->
+                    <div>
+                    [周视图] [月视图] [年视图]
+                    </div>
+                <!-- 视图 -->
+                </div> 
+                    <div class="flex flex1 white center">
+                        暂时没有数据呢~
+                    </div>
+             </div>
+         </div>
+     </div>
+</body>
+</html>
